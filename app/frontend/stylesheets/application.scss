@@ -8,3 +8,11 @@ $fa-font-path: '~font-awesome/fonts';
   width: 100%;
   height: auto;
 }
+.nav-item{
+  position: relative;
+}
+#agenda_delete{
+  position: absolute;
+  top: 7px;
+  right:40px;
+}
