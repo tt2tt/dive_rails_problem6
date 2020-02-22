@@ -10,6 +10,16 @@
       <div class="info">
         <h3 style="color: white;"><%= @working_team.name.truncate(15) %></h3>
       </div>
+
+      <div class="search">
+      <%= search_form_for @search do |f| %>
+        <div class="form-group">
+          <%= f.label :name_cont, "Name" %>
+          <%= f.text_field :name_cont, class: "form-control" %>
+        </div>
+        <div class="actions"><%= f.submit "Search" %></div>
+      <% end %>
+      </div>
     </div>
 
     <div class="user-panel mt-3 pb-3 mb-3">
