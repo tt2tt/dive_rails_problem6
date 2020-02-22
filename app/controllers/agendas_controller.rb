@@ -2,7 +2,8 @@ class AgendasController < ApplicationController
   # before_action :set_agenda, only: %i[show edit update destroy]
 
   def index
-    @agendas = Agenda.all
+    @search = Agenda.search(params[:q])
+    @agendas = @search.result
   end
 
   def new
