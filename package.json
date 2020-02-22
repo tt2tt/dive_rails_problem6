@@ -12,5 +12,6 @@
   "devDependencies": {
     "gulp-sass": "^4.0.2",
     "webpack-dev-server": "2.11.2"
-  }
+  },
+  "version": "0.0.0"
 }
