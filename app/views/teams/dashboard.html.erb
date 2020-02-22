@@ -26,6 +26,29 @@
           </tbody>
         </table>
       </div>
+        <nav class="mt-2">
+          <% @working_team.agendas.each do |agenda| %>
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <li class="nav-item has-treeview menu-open">
+                <a href="#" class="nav-link">
+                  <p>
+                    <%= agenda.title %>
+                    <i class="right fa fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview" style="display: block;">
+                  <% agenda.articles.each do |article| %>
+                    <li class="nav-item">
+                      <%= link_to article_path(article), class: 'nav-link' do %>
+                        <p><%= article.title %></p>
+                      <% end %>
+                    </li>
+                  <% end %>
+                </ul>
+              </li>
+            </ul>
+          <% end %>
+        </nav>
       <!-- /.card-body -->
     </div>
     <!-- /.card -->
