@@ -2,8 +2,10 @@ class TeamsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_team, only: %i[show edit update destroy]
 
+  PER = 1
+
   def index
-    @teams = Team.all
+    @teams = Team.all.page(params[:page]).per(PER)
   end
 
   def show

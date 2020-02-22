@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'kaminari'
 # Core
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rails', '~> 5.2.0'
